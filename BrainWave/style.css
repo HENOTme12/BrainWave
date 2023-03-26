@@ -1,53 +1,38 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     background-color: #f2f2f2;
-  }
-  
-  .logo {
+}
+
+.logo {
     flex: 1;
-  }
-  
-  .login {
+}
+
+.login {
     display: flex;
     justify-content: flex-end;
     flex: 1;
-  }
-  
-  .login a {
+}
+
+.login a {
     margin-right: 20px;
-  }
-  
-  .search {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .search input {
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .search button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    padding: 8px;
-    cursor: pointer;
-  }
-  
-  .search button i {
-    font-size: 16px;
-  }
-  
-  header {
+}
+
+
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -56,38 +41,257 @@ header {
     background-color: #fff;
     z-index: 999;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
+}
+
+.logo {
     float: left;
-    
-  }
-  
-  .login-btn {
+
+}
+
+.login-btn {
     float: right;
     margin-right: 20px;
     line-height: 60px;
-  }
-  
-  .sign-in {
+}
+
+.sign-in {
     float: right;
     margin-right: 10px;
     line-height: 60px;
-  }
-  
-  .search-icon {
-    float: none;
-    margin: 0 auto;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-image: url(search-icon.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor: pointer;
-  }
-  
-  .loggo{
-    height: 90px;
+}
+
+.loggo {
+    height: 200px;
     margin-bottom: 4px;
-  }
+}
+
+.search{
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: #FFF;
+    border-radius: 60px;
+    transition: 0.5s;
+    box-shadow: 0  0 5px #2573ef;
+    overflow: hidden;
+}
+
+.search.active{
+    width: 360px;
+}
+
+.search .icon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;;
+    cursor: pointer;
+}
+
+.search .icon::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #287dfc;
+    border-radius: 50%;
+    transform: translate(-4px,-4px) rotate(315deg);
+}
+
+.search .icon::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background:  #287dfc;
+    border-radius: 50%;
+    transform: translate(6px,6px) rotate(315deg);
+}
+
+.search .input{
+    position: relative;
+    width: 300px;
+    height: 60px;
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search .input input{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.clear{
+    position: absolute;
+    top: 44%;
+    transform: translate(-40%);
+    width: 15px;
+    height: 15px;
+    right: 570px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.clear::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.clear::after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background: #fff;
+    transform: rotate(315deg);
+}
+
+.recommendations{
+    background: #fff;
+    width: 1450px;
+    height: 540px;
+    border-radius: 60px;
+    margin-top: 30px;
+    margin-left: 10px;
+    box-shadow: -1px 4px 7px 4px rgba(0, 0, 0, 0.1);
+    overflow: scroll;
+}
+.heading{
+    font-family: PT Sans;
+    padding-left: 60px;
+    padding-top: 25px;
+}
+
+.horzline{
+    width: 270px;
+    height: 3.5px;
+    background: grey;
+    margin-left: 45px;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: consolas;
+}
+.container
+{
+	position: relative;
+	width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.container .box
+{
+	position: relative;
+	width: 280px;
+	height: 400px;
+	margin: 20px 0;
+	box-sizing: border-box;
+	
+}
+.container .box .imgBx
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	clip-path: circle(400px at center 100px);
+	transition: 0.5s;
+	transition-delay: 0.5s;
+    margin-left: 90px;
+}
+.container .box:hover .imgBx
+{
+	clip-path: circle(80px at center 100px);
+	transition-delay: 0s;
+}
+.container .box .imgBx img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.container .box .content
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 55%;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+    margin-left: 90px;
+}
+.container .box .content h2
+{
+	margin: 0;
+	padding: 0;
+}
+.container .box .content a
+{
+	text-decoration: none;
+	background: #000;
+	color: #fff;
+	padding: 5px;
+	display: inline-block;
+}
+.container .box .content h2,
+.container .box .content p,
+.container .box .content a
+{
+	opacity: 0;
+	transition: 0.5s;
+	transform: translateY(20px);
+}
+.container .box:hover .content h2
+{
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.5s
+}
+.container .box:hover .content p
+{
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.7s
+}
+.container .box:hover .content a
+{
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.9s
+}
