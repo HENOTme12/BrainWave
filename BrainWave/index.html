@@ -1,93 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" class="css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" class="css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header style="position: fixed; top: 0; left: 0; right: 0; background-color: #fff; height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
-        <div style="display: flex; align-items: center;">
-          <img class="loggo" src="img/logo.png"  alt="Logo" style="height: 80px; width: 150px; margin-right: 20px;">
-          <span style="font-size: 20px; font-weight: bold;"></span>
-        </div>
-        
-      <div class="search">
-        <div class="icon"></div>
-        <div class="input">
-          <input type="text" placeholder="Search" id="mysearch">
-        </div>
-        <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+  <header
+    style="position: fixed; top: 0; left: 0; right: 0; background-color: #fff; height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
+    <div style="display: flex; align-items: center;">
+      <img class="loggo" src="img/logo.png" alt="Logo" style="cursor: pointer; height: 80px; width: 150px; margin-right: 20px;">
+      <span style="font-size: 20px; font-weight: bold;"></span>
+    </div>
+
+    <div class="search">
+      <div class="icon"></div>
+      <div class="input">
+        <input type="text" placeholder="Search" id="mysearch">
       </div>
-      
-        <div style="display: inline-block; align-items: center;">
-          <span style="font-size: 16px; margin-right: 20px;">Sign In</span>
-          <button style="background-color: #007bff; color: #fff; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px;">Login</button>
-        </div>
+      <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+    </div>
 
-        <script>
-          const icon = document.querySelector('.icon');
-          const search = document.querySelector('.search');
-          icon.onclick = function(){
-            search.classList.toggle('active')
-          }
-        </script>
-    </header>
+    <div style="display: inline-block; align-items: center;">
+      <span style="font-size: 16px; margin-right: 20px; cursor: pointer;">Sign In</span>
+      <button
+        style="background-color: #007bff; color: #fff; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Login</button>
+    </div>
 
-    <div class="recommendations">
-      <b><h1 class="heading">Recommendations</h1></b>
-      <hr class="horzline">
-      <div class="container">
-        <div class="box">
-          <div class="imgBx">
-            <img src="img/img1.jpg">
-          </div>
-          <div class="content">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#">Read More</a>
-          </div>
+    <script>
+      const icon = document.querySelector('.icon');
+      const search = document.querySelector('.search');
+      icon.onclick = function () {
+        search.classList.toggle('active')
+      }
+    </script>
+  </header>
+<div class="grid">
+  <div class="recommendations">
+    <b>
+      <h1 class="heading">Recommendations</h1>
+    </b>
+    <hr class="horzline">
+    <div class="container1">
+      <div class="box">
+        <div class="imgBx">
+          <img src="img/img1.jpg">
         </div>
-        <div class="box">
-          <div class="imgBx">
-            <img src="img/img2.jpg">
-          </div>
-          <div class="content">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <div class="content1">
+          <h2>Title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#">Read More</a>
-          </div>
+          <a href="#">Read More</a>
         </div>
-        <div class="box">
-          <div class="imgBx">
-            <img src="img/img3.jpg">
-          </div>
-          <div class="content">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#">Read More</a>
-          </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="img/img2.jpg">
         </div>
-        <div class="box">
-          <div class="imgBx">
-            <img src="img/img4.jpg">
-          </div>
-          <div class="content">
-            <h2>Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <div class="content1">
+          <h2>Title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#">Read More</a>
-          </div>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="img/img3.jpg">
+        </div>
+        <div class="content1">
+          <h2>Title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">Read More</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="img/img4.jpg">
+        </div>
+        <div class="content1">
+          <h2>Title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#">Read More</a>
         </div>
       </div>
     </div>
+  </div>
+  </div>
+
+  <div class="featured">
+     <h1 class="heading1">Featured</h1>
+     <hr class="horzline1">
+     <div class="container">
+		<div class="card">
+			<div class="content">
+				<h2>1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="content">
+				<h2>2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="content">
+				<h2>3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+		<div class="card">
+			<div class="content">
+				<h2>4</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
 </body>
+
 </html>
